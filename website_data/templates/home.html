@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>International High School Writing Contest</title>
+  <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/65a259d37d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+
+  <meta name="google-site-verification" content="jxchWvoL8fu6MlRAkUqK7ldbkYy9aoSEpOKgJzdPfs0" />
+
+  <meta name="keywords" content="highschoolwritingcontest, high school writing contest, write for money, free highschool writing contest, free highschool short story writing contests, easiest high school writing contest, writingwaves, international high school writing contest, high school screen writing contest">
+  <meta name="author" content="Writing Waves">
+  <!-- <meta name="robots" content="noindex"> -->
+  <meta http-equiv="content-language" content="en-us">
+  <link rel="canonical" href="https://highschoolwritingcontest.com/home/">
+  <meta name="description" content="HighSchoolWritingContest is a unique online platform that challenges writers of all backgrounds and experience levels to put their skills to the test. We invite you to craft compelling essays, share your thoughts, and compete for amazing prizes. Whether you're a seasoned wordsmith or a novice writer, we provide the perfect arena to showcase your talent and engage with a like-minded community.">
+
+  <meta name="og:title" property="og:title" content="High School Writing Contest">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.highschoolwritingcontest.com/home/" />
+  <meta property="og:image" content="../static/og_img.png" />
+
+  <meta name="twitter:title" content="High School Writing Contest">
+  <meta name="twitter:description" content="High School Writing Contest. Write for money.">
+  <meta name="twitter:image" content="../static/og_img.png">
+  <meta name="twitter:card" content="summary">
+
+
+  <style>
+    body > nav > ul > li:nth-child(1) > a {
+      color: black;
+      background-color: white;
+    }
+
+    .rect img {
+
+      width: 20vw;
+    /* aspect-ratio: 4 / 4.3; */
+      height: 46vh;
+
+    }
+  </style>
+   <style>
+    body > nav > ul > li:nth-child(1) > a {
+      color: black;
+      background-color: white;
+    }
+
+    .rect img {
+      width: 100%; /* Make the image responsive by setting its width to 100% */
+      max-height: 46vh;
+    }
+
+    .notification-top-bar {
+      display: none; /* Hide the notification bar on small screens */
+    }
+
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .underline-text {
+        display: none !important;
+      }
+
+      .bar {
+        width: 100vw !important;
+      }
+
+      .rect {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 1245px) {
+      .main {
+        width: 100vw;
+        margin: 0 !important; 
+      }
+
+      p { 
+        font-size: 15px !important;
+      }
+
+      .background-image {
+        height: auto !important;
+      }
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    #nav-button {
+      cursor: pointer;
+    }
+
+    .mobile-nav ul li {
+      width: 100%;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="notification-top-bar">
+    <p>
+      2023 International High School Writing Contest Application Now Open! Check out our 
+      <small><a href="/submit">Submission Page</a></small>
+      <span>x</span>
+    </p>
+  </div>
+
+  <ul class="top-nav">
+    <img class="logo" src="../static/jack_logo.png" alt="">
+    <div class="vl"></div>
+    <div class="title-nav">
+      <h1>International High School Writing Contest</h1>
+      <div class="underline-text">
+        <h2>Sponsored by</h2>
+        <h2 style="text-decoration: underline; margin-left: 6px !important;">Writing Waves</h2>
+      </div>
+    </div>
+  </ul>
+
+  <nav>
+    <ul class="right">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+    </ul>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="javascript:void(0);" id="nav-button" onclick="mobileNav()">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+  </div>
+  <script>
+    function mobileNav() {
+      if (document.querySelector("body > div.mobile-nav > ul").style.display == "none") {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "block"
+      }
+      else {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "none"
+      }
+    }
+  </script>
+
+  <div class="main" style="display: flex; flex-wrap: wrap;">
+
+    <div class="bar">
+      
+      <div class="info-box">
+        <h1>140+ Entries <i style="color: #dfc54f;" class="fa-regular fa-paper-plane"></i></h1>
+      </div>
+
+      <div class="vl"></div>
+
+      <div class="info-box">
+        <h1>17+ Awards Given <i style="color: #a43434;" class="fa-solid fa-award"></i></h1>
+      </div>
+
+      <div class="vl"></div>
+
+      <div class="info-box">
+        <h1>5 Different Countries <i style="color: #312eb5;" class="fa-solid fa-earth-americas"></i></h1>
+      </div>
+
+    </div>
+
+    <div class="background-image">
+      <h2>Discovering Our Voices Through Writing</h2>
+    </div>
+
+    <div class="rect">
+
+      <!-- <img src="https://assets.entrepreneur.com/content/3x2/2000/1683118869-GettyImages-850630688.jpg" alt=""> -->
+  
+      <p>
+        The International High School Writing Contest is an annual analytical and
+        creative writing competition for all high school students eager to share
+        their work. The competition recognizes creativity and excellence in 5
+        categories: Short Story, Flash Fiction, Poetry, Critical Essay, and
+        Dramatic Script. All students' works will be read through and analyzed by
+        multiple approved judges, with actual feedback returned alongside all
+        entries. There are no entry fees. All high school students are invited to
+        particpate.
+      </p>
+
+    </div>
+
+    <div class="rect">
+
+      <p>
+        We wanted a writing competition that was 100% free with a transparent
+        submission and judging process. Most writing competitions either give you
+        an award or don't, with zero feedback on how to improve. The International
+        High School Writing Contest gives students all around the world an
+        opportunity to share their work and compete against others whilst
+        exploring and improving their own writing—all without having to worry
+        about payment or entrance fees.
+      </p>
+  
+      <!-- <img src="../static/home_img2.jpg" style="float: right" alt=""> -->
+
+    </div>
+
+    <div>
+      <h2>2022 Winner: Kai Huang</h2>
+      <h3>Gold Medallion Recipient for Flash Fiction: "Growing Pains"</h3>
+      <p style="line-height: normal;">Age 18 | Gold Medallion Recipient | GongShan High School | Shanghai, China</p>
+      <div class="rect">
+        <img src="../static/kai.jpg" alt="kai" >
+        <p style="padding-right: 70px;">"I've never written competitively. Prior to the 2022 IHSWC, I'd only written a handful of short fiction stories--mainly to practice for my English exams--and had never considered sharing them with anyone. But after encouragement from my teacher, I found dozens of competitions to apply to, including this one. I'd never expected to come back with any sort of award--but I did, and these competitions showed how fun and rewarding writing could be. Knowing I am being heard, that my writings are being read and even published publicly, have empowered in every part of my life.  I am deeply grateful for Writing Waves and this writing contest for giving me the confidence and love to continue my English studies throughout college.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <h3>
+        Check out our Instagram!
+        <a style="margin-left: 25px;" href='https://www.instagram.com/highschool.writing/'>
+            <img src="../static/instagram_logo.png" >
+        </a>
+    </h3>
+    <h3>Sponsored by <a href="https://writingwaves.org">writingwaves.org</a></h3>
+    <h3>©2023 by International High School Writing Competition</h3>
+  </footer>
+
+  <script>
+    document.querySelector(".notification-top-bar p span").addEventListener("click", () => {
+      document.querySelector(".notification-top-bar").style.display = "none"
+    })
+  </script>
+
+</body>
+
+</html>

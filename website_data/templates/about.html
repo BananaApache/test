@@ -1,0 +1,274 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>International High School Writing Contest</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <link href="https://fonts.cdnfonts.com/css/apex-sans" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+  <script src="https://kit.fontawesome.com/65a259d37d.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+          overflow-x: hidden !important;
+        }
+
+        footer h3 a img {
+          max-width: 25px;
+          height: auto;
+        }
+
+        .wrapper {
+          margin-top: 30px;
+        }
+
+        .box {
+          width: 100%;
+          display: flex;
+          justify-content: space-between !important;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-bottom: 100px;
+        }
+
+        .box1 h2 {
+          margin-right: 315px !important;
+        }
+
+        .box2 h2 {
+          margin-left: 237px;
+        }
+
+        .box3 h2 {
+          margin-right: 262px;
+        }
+
+        .box h2 {
+          width: 28vw;
+          background-color: lightblue;
+          border: 2px solid black;
+          border-radius: 5px;
+          padding: 30px;
+          z-index: -1;
+          font-size: 1vw;
+          font-weight: 100; 
+        }
+
+        .box img {
+          width: 21vw !important;
+          height: 14vw !important;
+          z-index: -1;
+        }
+
+        .fadeInLeft {
+          animation: fadeInLeft 1s both;
+        }
+
+        .fadeInRight {
+          animation: fadeInRight 1s both;
+        }
+
+        @keyframes fadeInLeft {
+          0% {
+            opacity: 0;
+            transform: translateX(-150px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeInRight {
+          0% {
+            opacity: 0;
+            transform: translateX(150px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @media screen and (max-width: 1187px) {
+          .box img {
+            display: none;
+          }
+
+          .box {
+            justify-content: center !important;
+          }
+
+          h2 {
+            margin: 0 !important;
+          }
+
+          .underline-text { display: none !important }
+        }
+
+        @media screen and (max-width: 1104px) {
+          h1, h2, li { font-size: 25px !important }
+          .logo, .vl { display: none; }
+          .top-nav { width: auto !important; }
+        }
+
+        @media screen and (max-width: 1900px) {
+          li { height: auto; font-size: 25px; }
+        }
+
+        @media screen and (max-width: 600px) {
+          .box h2 {
+            margin-right: 0 !important;
+          }
+        }
+
+        @media screen and (max-width: 901px) {
+          li { font-size: 15px !important; }
+          .box h2 { width: 80%; }
+        }
+
+        body > nav > ul > li:nth-child(5) > a {
+            color: black;
+            background-color: white;
+        }
+
+        footer h3 a {
+          color: wheat;
+          margin-left: 8px;
+        }
+    </style>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  
+  <ul class="top-nav">
+    <img class="logo" src="../static/jack_logo.png" alt="">
+    <div class="vl"></div>
+    <div class="title-nav">
+      <h1>International High School Writing Contest</h1>
+      <div class="underline-text">
+        <h2>Sponsored by</h2>
+        <h2 style="text-decoration: underline; margin-left: 6px !important;">Writing Waves</h2>
+      </div>
+    </div>
+  </ul>
+
+  <nav>
+    <ul class="right">
+      <li><a href="/home" style="color: white; background-color: rgba(0, 0, 0, 0);">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="javascript:void(0);" id="nav-button" onclick="mobileNav()">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+  </div>
+  <script>
+    function mobileNav() {
+      if (document.querySelector("body > div.mobile-nav > ul").style.display == "none") {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "block"
+      }
+      else {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "none"
+      }
+    }
+  </script>
+
+  <h1>About Us</h1>
+
+  <div class="wrapper">
+
+    <div class="box box1">
+      <img style="border-radius: 5px; width: 598px; height: 316px; margin-left: 190px;" src="https://fullfocus.co/wp-content/uploads/2018/04/pen-on-paper.jpg">
+      <h2>The International High School Writing Contest (IHSWC for short) is a contest made for highschoolers by highschoolers. Started by two creative writers, the IHSWC
+        seeks to address three gap in writing competitions—accessibiliy, functionality, and transparency. 
+      </h2>
+    </div>
+
+    <div class="box box2">
+      <h2>
+        In an age of information where the incentive and pressure for awards and excellence seems to grow exponentially,
+        our founders grew increasingly frustrated with the "prestigious" but often-paywalled and US-only writing competitions that sometimes gives and sometimes does not give you an award—with zero
+        explanation and zero feedback on how to improve.
+      </h2>
+      <img style="border-radius: 5px; width: 640px; height: 365px; margin-right: 190px;" src="https://www.ohow.com/wp-content/uploads/2020/08/7400_BackBack_Blog_1280x853.jpg" >
+    </div>
+
+    <div class="box box3">
+      <img style="border-radius: 5px; height: 305px;width: 392px;margin-left: 190px;" src="https://media.istockphoto.com/id/1094993558/vector/global-business-flat-design-style-colorful-illustration.jpg?s=612x612&w=0&k=20&c=VjRKIHnj6CmLFseO0ERfQrRl-dg5Lwm1fQhDZ4XE318=">
+      <h2>
+        So, in 2022, our founders made IHSWC. With an emphasis on world-wide accessibility and a clear submission-to-judging-to-award process, the core of the IHSWC is be an uplifting community
+        for creative highschoolers and to reward and give them a place to have their work seen.
+    </h2>
+    </div>
+
+  </div>
+  
+    
+  </div>
+
+    <footer>
+        <h3>
+            Check out our Instagram!
+            <a style="margin-left: 25px;" href='https://www.instagram.com/highschool.writing/'>
+                <img src="../static/instagram_logo.png" >
+            </a>
+        </h3>
+        <h3>Sponsored by <a href="https://writingwaves.org">writingwaves.org</a></h3>
+        <h3>©2023 by International High School Writing Competition</h3>
+    </footer>
+    
+    <script>
+
+      const observer1 = new IntersectionObserver(e => {
+        e.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll(".box h2")[0].classList.add("fadeInLeft")
+            document.querySelectorAll(".box img")[0].classList.add("fadeInRight")
+          }
+        })
+      })
+
+      observer1.observe(document.querySelector(".box1"))
+
+      const observer2 = new IntersectionObserver(e => {
+        e.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll(".box h2")[1].classList.add("fadeInLeft")
+            document.querySelectorAll(".box img")[1].classList.add("fadeInRight")
+          }
+        })
+      })
+
+      observer2.observe(document.querySelector(".box2"))
+      
+      const observer3 = new IntersectionObserver(e => {
+        e.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll(".box h2")[2].classList.add("fadeInLeft")
+            document.querySelectorAll(".box img")[2].classList.add("fadeInRight")
+          }
+        })
+      })
+
+      observer3.observe(document.querySelector(".box3"))
+
+    </script>
+</body>
+</html>

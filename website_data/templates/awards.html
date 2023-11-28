@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>International High School Writing Contest</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <link href="https://fonts.cdnfonts.com/css/apex-sans" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+  <script src="https://kit.fontawesome.com/65a259d37d.js" crossorigin="anonymous"></script>
+
+  <style>
+    body > nav > ul > li:nth-child(3) > a {
+        color: black;
+        background-color: white;
+    }
+
+    .main p {
+      margin-left: 25px !important
+    }
+  </style>
+</head>
+
+<body>
+  
+  <ul class="top-nav">
+    <img class="logo" src="../static/jack_logo.png" alt="">
+    <div class="vl"></div>
+    <div class="title-nav">
+      <h1>International High School Writing Contest</h1>
+      <div class="underline-text">
+        <h2>Sponsored by</h2>
+        <h2 style="text-decoration: underline; margin-left: 6px !important;">Writing Waves</h2>
+      </div>
+    </div>
+  </ul>
+
+  <nav>
+    <ul class="right">
+      <li><a href="/home" style="color: white; background-color: rgba(0, 0, 0, 0);" style="color: white; background-color: rgba(0, 0, 0, 0);" style="color: white; background-color: rgba(0, 0, 0, 0);">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="javascript:void(0);" id="nav-button" onclick="mobileNav()">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <ul>
+      <li><a href="/home" style="color: white; background-color: rgba(0, 0, 0, 0);" style="color: white; background-color: rgba(0, 0, 0, 0);" style="color: white; background-color: rgba(0, 0, 0, 0);">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+  </div>
+  <script>
+    function mobileNav() {
+      if (document.querySelector("body > div.mobile-nav > ul").style.display == "none") {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "block"
+      }
+      else {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "none"
+      }
+    }
+  </script>
+
+  <div class="main">
+    <h1>Awards</h1>
+    <h2>Gold Medallion <i class="fa-solid fa-award" style="color: gold"></i></h2>
+    <p>Published on the IHSWC website and publication. $50 cash prize (for US highschoolers).</p>
+    <h2>Silver Medallion <i class="fa-solid fa-award" style="color: silver"></i></h2>
+    <p>Published on the IHSWC publication.</p>
+    <h2>Bronze Medallion <i class="fa-solid fa-award" style="color: brown"></i></h2>
+    <p>Published on the IHSWC publication.</p>
+    <h2>Honorable Mention <i class="fa-solid fa-ribbon" style="color: red"></i></h2>
+    <p>Will recieve certificates</p>
+    <p>All award recipients will be emailed certificates and published in a list on our website</p>
+  </div>
+
+  <footer>
+    <h3>
+        Check out our Instagram!
+        <a style="margin-left: 25px;" href='https://www.instagram.com/highschool.writing/'>
+            <img src="../static/instagram_logo.png" >
+        </a>
+    </h3>
+    <h3>Sponsored by <a href="https://writingwaves.org">writingwaves.org</a></h3>
+    <h3>©2023 by International High School Writing Competition</h3>
+  </footer>
+
+</html>
+</body>
+
+</html>

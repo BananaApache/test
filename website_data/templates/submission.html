@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../static/favicon.ico">
+
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" href="../../static/style.css" />
+    <script
+      src="https://kit.fontawesome.com/65a259d37d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      #root {
+        display: none;
+      }
+
+      #submission-box {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .submission {
+        width: 400px;
+        margin: 50px;
+        background-color: lightblue;
+        padding: 30px;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+
+      .info {
+        margin-top: 10px;
+      }
+
+      p {
+        margin-left: 25px;
+        margin-bottom: 0px;
+        margin-right: 100px;
+        margin-top: 0px;
+        line-height: 30px;
+        text-transform: capitalize;
+      }
+
+      .submission a {
+        margin: 20px auto 10px auto;
+        width: 170px;
+        height: 22px;
+        color: white !important;
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #eab949;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+
+      .submission a:hover {
+        background-color: #d0a43d;
+      }
+
+      .submission a:visited {
+        color: inherit;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <ul class="top-nav">
+      <img class="logo" src="../../static/jack_logo.png" alt="">
+      <div class="vl"></div>
+      <div class="title-nav">
+        <h1>International High School Writing Contest</h1>
+        <div class="underline-text">
+          <h2>Sponsored by</h2>
+          <h2 style="text-decoration: underline; margin-left: 6px !important;">Writing Waves</h2>
+        </div>
+      </div>
+    </ul>
+
+    <nav>
+      <ul class="right">
+        <li><a href="/home" style="color: white; background-color: rgba(0, 0, 0, 0);">Home</a></li>
+        <li><a href="/submit">Submit</a></li>
+        <li><a href="/awards">Awards</a></li>
+        <li><a href="/process">Our Process</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/sign-in">Sign In</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav">
+      <a href="javascript:void(0);" id="nav-button" onclick="mobileNav()">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <ul>
+        <li><a href="/home" style="color: white; background-color: rgba(0, 0, 0, 0);">Home</a></li>
+        <li><a href="/submit">Submit</a></li>
+        <li><a href="/awards">Awards</a></li>
+        <li><a href="/process">Our Process</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/sign-in">Sign In</a></li>
+      </ul>
+    </div>
+    <script>
+      function mobileNav() {
+        if (document.querySelector("body > div.mobile-nav > ul").style.display == "none") {
+          document.querySelector("body > div.mobile-nav > ul").style.display = "block"
+        }
+        else {
+          document.querySelector("body > div.mobile-nav > ul").style.display = "none"
+        }
+      }
+    </script>
+
+    <h1>Admin Page</h1>
+
+    <a href="/admin-page?login=success&user=admin" style="color: blue;text-decoration: none;margin-left: 100px;">Back to Submissions</a>
+
+    <!-- <div id="root">{{submissions}}</div> -->
+    <div id="root">{{judge_submitted}}</div>
+
+    <div id="submission-box">
+        <div class="submission">
+          <p style="text-transform: ca  italize; font-size: 30px;">{{submission.firstname}} {{submission.lastname}}</p>
+          <div class="info">
+            <!-- <p>Submission: {{submission.id}}</p> -->
+            <p>Title: {{submission.title1}}</p> 
+            <p>Category: {{submission.category1}}</p>
+            <p>Word Count: {{submission.word_count1}}</p>
+          </div>
+          <!-- <embed src="/media/{{submission.pdf_file1}}" type="application/pdf"> -->
+          <a href="/media/{{submission.pdf_file1}}" target="_blank">View Submission <i class="fa-solid fa-right-long"></i></a>
+
+          <form method="post">
+            {% csrf_token %}
+            <p>Graded by:</p>{{form.graded_by}}
+            <p>Rating (1.0-10.0): </p>{{form.rating}}
+            <p>Review: </p>{{form.review}}
+            <input type="hidden" name="submission" id="id_submission" value="{{id}}">
+            <button type="submit">Save</button>
+          </form>
+
+          
+          <div id="judge-box">
+            <p>Graded by: {{judging.graded_by}}</p>
+            <p>Rating: {{judging.rating}}</p>
+            <p>Reviews: <p style="display: none;">{{judging.review}}</p></p>
+            <button onclick="addForm()">Add Review</button>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        function addForm() {
+            form = document.createElement("form")
+            textarea = document.createElement("textarea")
+            form.setAttribute("method", "post")
+            textarea.setAttribute("name", "review")
+            textarea.setAttribute("style", "width: 380px; height: 170px;")
+            textarea.setAttribute("required", "")
+            textarea.setAttribute("id", "id_review")
+            textarea.setAttribute("placeholder", "Author Name: Review")
+            submit = document.createElement("button")
+            submit.setAttribute("type", "submit")
+            submit.innerHTML = "Submit"
+
+            graded_by = document.createElement("input")
+            graded_by.setAttribute("type", "text")
+            graded_by.setAttribute("name", "graded_by")
+            graded_by.setAttribute("id", "id_graded_by")
+            graded_by.setAttribute("value", "{{judging.graded_by}}")
+            graded_by.setAttribute("style", "display: none")
+            rating = document.createElement("input")
+            rating.setAttribute("type", "radio")
+            rating.setAttribute("name", "rating")
+            rating.setAttribute("id", "id_rating_3")
+            rating.setAttribute("value", "{{judging.rating}}")
+            rating.setAttribute("style", "display: none")
+            submission = document.createElement("input")
+            submission.setAttribute("name", "submission")
+            submission.setAttribute("id", "id_submission")
+            submission.setAttribute("value", "{{judging.submission}}")
+            submission.setAttribute("style", "display: none")
+
+            form.innerHTML += `{% csrf_token %}`
+            form.append(textarea)
+            form.append(submit)
+            form.append(graded_by)
+            form.append(rating)
+            form.append(submission)
+            rating.checked = true
+            document.querySelector("#judge-box").append(form)
+
+            btn = document.querySelector("#judge-box > button")
+            btn.setAttribute("onclick", "removeForm()")
+            btn.innerHTML = "Cancel Review"
+        }
+
+        function removeForm() {
+            document.querySelector("#judge-box > form").remove()
+            btn = document.querySelector("#judge-box > button")
+            btn.setAttribute("onclick", "addForm()")
+            btn.innerHTML = "Add Review"
+        }
+
+        if (document.querySelector("#root").innerText == "True") {
+            document.querySelector("form").remove()
+        }
+        else {
+            document.querySelector("div#judge-box").remove()
+        }
+
+        if (document.querySelector("#judge-box > p:nth-child(4)").innerText.includes("|")) {
+          p = document.querySelector("#judge-box > p:nth-child(4)")
+          p.innerText.split("|").forEach(d => {
+            document.querySelector("#judge-box").innerHTML += `<li>${d}</li>`
+          })
+        }
+        else {
+          document.querySelector("#judge-box").innerHTML += `<p>${p = document.querySelector("#judge-box > p:nth-child(4)").innerHTML}</p>`
+        }
+    </script>    
+
+  </body>
+</html>

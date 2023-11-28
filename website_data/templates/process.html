@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>International High School Writing Contest</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <link href="https://fonts.cdnfonts.com/css/apex-sans" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+  <script src="https://kit.fontawesome.com/65a259d37d.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+  <style>
+    body > nav > ul > li:nth-child(4) > a {
+        color: black;
+        background-color: white;
+    }
+
+    .main p {
+      margin-left: 25px !important
+    }
+
+    body > div.main > p:nth-child(4) > a {
+      color: #ff8d00;
+    }
+    body > div.main > p:nth-child(4) > a:visited {
+      color: #ff8d00;
+    }
+  </style>
+  <link rel="stylesheet" href="../static/style.css" />
+</head>
+
+<body>
+
+  <ul class="top-nav">
+    <img class="logo" src="../static/jack_logo.png" alt="">
+    <div class="vl"></div>
+    <div class="title-nav">
+      <h1>International High School Writing Contest</h1>
+      <div class="underline-text">
+        <h2>Sponsored by</h2>
+        <h2 style="text-decoration: underline; margin-left: 6px !important;">Writing Waves</h2>
+      </div>
+    </div>
+  </ul>
+
+  <nav>
+    <ul class="right">
+      <li><a href="/home" style="color: white; background-color: rgba(0, 0, 0, 0);">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="javascript:void(0);" id="nav-button" onclick="mobileNav()">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <ul>
+      <li><a href="/home" style="color: white; background-color: rgba(0, 0, 0, 0);">Home</a></li>
+      <li><a href="/submit">Submit</a></li>
+      <li><a href="/awards">Awards</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+  </div>
+  <script>
+    function mobileNav() {
+      if (document.querySelector("body > div.mobile-nav > ul").style.display == "none") {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "block"
+      }
+      else {
+        document.querySelector("body > div.mobile-nav > ul").style.display = "none"
+      }
+    }
+  </script>
+
+  <div class="main">
+    <h1>Our Process</h1>
+    <h2 style="text-align: center;">For complete transparency, here's the entire process from submission to judging to awards.</h2>
+    <h2>Submission</h2>
+    <p>You submit up to 5 entries through our <a href="/form">form</a>
+    </p>
+    <p>Your information is sent to our database</p>
+    <p>From there, only student works and their subsequent categories are sent to a separate platform for judges
+      (without
+      names, ages, or any other personal information disclosed)</p>
+    <h2>Judging</h2>
+    <p>A minimum of two chosen judges thoroughly review your work</p>
+    <p>Give both a rating on a scale (0.0 to 10.0) and additional comments on your piece</p>
+    <p>Note: there is no objective rubric</p>
+    <p>In each of the 5 categories, we separate the entries by average rating, and the top 30% enter the second round
+      of
+      judging</p>
+    <p>A minimum of 3 total judges rate your piece again</p>
+    <p>Top 10-20 entries in each category are then ranked top to bottom</p>
+    <h2>Awards</h2>
+    <p>In each category:</p>
+    <p>Highest 1-2: Gold Medallions</p>
+    <p>Next highest 3-4: Silver Medallions</p>
+    <p>Next highest 6-10: Bronze Medallions</p>
+    <p>Rest of the top 30%: Honorable Mentions</p>
+    <p>A list of all award recipients will be made, with email certificates sent to each student and parent/guardian's
+      emails</p>
+    <p>All medallion recipients will be published on the ISHWC Medium publication.</p>
+    <p>Gold Medallion recipients will also be published on our website, and the cash prize will be transferred through
+      Zelle (with either the parent's email address or phone number)</p>
+    <p>Unfortunately, because of international transfer fees, no cash prizes are currently available for international
+      highschoolers.</p>
+  </div>
+
+  <footer>
+    <h3>
+        Check out our Instagram!
+        <a style="margin-left: 25px;" href='https://www.instagram.com/highschool.writing/'>
+            <img src="../static/instagram_logo.png" >
+        </a>
+    </h3>
+    <h3>Sponsored by <a href="https://writingwaves.org">writingwaves.org</a></h3>
+    <h3>©2023 by International High School Writing Competition</h3>
+  </footer>
+
+</body>
+
+</html>
